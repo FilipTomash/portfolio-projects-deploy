@@ -1,0 +1,92 @@
+<div
+  class="post"
+  [ngClass]="{ 'post-hover': isHoverShadow }"
+  (click)="onPostClick()"
+>
+  <div class="post-heading">
+    <h3>{{ eventPost.title }}</h3>
+    <span
+      class="likes-display"
+      [ngClass]="
+        currentUser._id === eventPost.author?._id && 'disabled-likes-display'
+      "
+    >
+      <ng-container *ngIf="!isLikeShown">
+        <span class="btn-hidden">
+          <i class="fa-solid fa-thumbs-up"></i>
+          {{ eventPost.likes }}
+        </span>
+        <span class="btn-hidden">
+          <i class="fa-solid fa-thumbs-down"></i>
+          {{ eventPost.dislikes }}
+        </span>
+      </ng-container>
+      <ng-container *ngIf="isLikeShown">
+        <button
+          class="btn-shown"
+          (click)="onPostLike($event)"
+          [disabled]="isLikeDisabled"
+          [ngClass]="{ 'disabled-like': isLikeDisabled }"
+        >
+          <i class="fa-solid fa-thumbs-up"></i>
+          {{ eventPost.likes }}
+        </button>
+        <button
+          class="btn-shown"
+          (click)="onPostLike($event)"
+          [disabled]="isLikeDisabled"
+          [ngClass]="{ 'disabled-like': isLikeDisabled }"
+        >
+          <i class="fa-solid fa-thumbs-down"></i>
+          {{ eventPost.dislikes }}
+        </button>
+      </ng-container>
+    </span>
+  </div>
+  <div class="post-body">{{ eventPost.description }}</div>
+  <div class="post-body-details">
+    <span><strong>Location:</strong> {{ eventPost.location }}</span>
+    <span><strong>Date:</strong> {{ eventPost.date | date }}</span
+    ><span><strong>Time:</strong> {{ eventPost.time }}</span>
+  </div>
+  <div class="post-body-details">
+    <span><strong>Organizer:</strong> {{ eventPost.organizer }}</span
+    ><span><strong>Artists:</strong> {{ eventPost.artists }}</span>
+
+    <ng-container *ngIf="eventPost.cost <= 0">
+      <span><strong>Entrance: </strong>Free</span>
+    </ng-container>
+    <ng-container *ngIf="eventPost.cost > 0">
+      <span
+        ><strong>Entrance: </strong>
+        {{ eventPost.cost | currency : "EUR" }}</span
+      >
+    </ng-container>
+  </div>
+  <div class="post-footer">
+    <span>
+      <i class="fa fa-user-circle"></i>
+      <strong>
+        {{
+          currentUser?._id === eventPost.author._id
+            ? "You"
+            : eventPost?.author?.username
+        }}</strong
+      >
+
+      on
+      <span>{{ eventPost.createdAt | date }}</span>
+    </span>
+    <div class="comments">
+      <ng-container *ngIf="isEditAllowed">
+        <span class="edit-link" (click)="onPostEdit($event)"
+          >Edit <i class="fa-solid fa-pen-to-square"></i
+        ></span>
+        <span class="delete-link" (click)="onPostDelete($event)">
+          Delete <i class="fa-solid fa-trash-can"></i>
+        </span>
+      </ng-container>
+      <span>Comments: {{ eventPost.comments.length }}</span>
+    </div>
+  </div>
+</div>

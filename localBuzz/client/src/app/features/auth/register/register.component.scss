@@ -1,0 +1,11 @@
+@use "../../../../assets/scss/variables" as var;
+
+.login-tag {
+  color: #7cabae;
+  > span {
+    &:hover {
+      cursor: pointer;
+      color: aliceblue;
+    }
+  }
+}

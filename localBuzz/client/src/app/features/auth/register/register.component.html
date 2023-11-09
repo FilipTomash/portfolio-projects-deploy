@@ -1,0 +1,93 @@
+<section class="container">
+  <div class="container-heading">
+    <h2>Register</h2>
+  </div>
+  <form
+    [formGroup]="registerForm"
+    class="form-container"
+    (ngSubmit)="onFormSubmit()"
+  >
+    <div class="form-group">
+      <label for="register-username">Username</label>
+      <input
+        id="register-username"
+        type="text"
+        class="form-control"
+        autocomplete="off"
+        formControlName="username"
+      />
+      <p
+        *ngIf="
+          registerForm.controls.username.invalid &&
+          registerForm.controls.username.touched
+        "
+        class="form-error"
+      >
+        Invalid Username
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="register-email">Email</label>
+      <input
+        id="register-email"
+        class="form-control"
+        formControlName="email"
+        autocomplete="off"
+        type="email"
+      />
+      <p
+        *ngIf="
+          registerForm.controls.email.invalid &&
+          registerForm.controls.email.touched
+        "
+        class="form-error"
+      >
+        Invalid Email
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="register-password">Password</label>
+      <input
+        id="register-password"
+        class="form-control"
+        type="password"
+        formControlName="password"
+        autocomplete="off"
+      />
+      <p
+        class="form-error"
+        *ngIf="
+          registerForm.controls.password.invalid &&
+          registerForm.controls.password.touched
+        "
+      >
+        Your password must be at least 8 characters, and include at least one
+        special character, one uppercase letter, and a number.
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="register-confirm-password">Confirm Password</label>
+      <input
+        id="register-confirm-password"
+        type="password"
+        class="form-control"
+        formControlName="confirmPassword"
+        autocomplete="off"
+      />
+      <p
+        *ngIf="
+          registerForm.errors?.passwordMismatch &&
+          registerForm.controls.confirmPassword.touched
+        "
+        class="form-error"
+      >
+        Passwords must match
+      </p>
+    </div>
+    <div class="login-tag">
+      You already have an account? <span routerLink="/login">Log in here.</span>
+    </div>
+
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  </form>
+</section>

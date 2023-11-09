@@ -1,0 +1,37 @@
+<div class="comment-container">
+  <ng-container *ngIf="comments.length <= 0">
+    <h3>No Comments Yet</h3>
+  </ng-container>
+  <ng-container *ngIf="comments.length > 0">
+    <h3>Comments</h3>
+    <div class="comment" *ngFor="let comment of comments">
+      <p class="comment-body">{{ comment.body }}</p>
+      <p class="comment-author">
+        <span
+          class="post-link"
+          *ngIf="showPostLink"
+          [routerLink]="'/event-posts/' + comment.post"
+          ><i class="fa-solid fa-arrow-up-right-from-square"></i> Link to
+          post</span
+        >
+        <span
+          *ngIf="currentUser?._id === comment.author._id"
+          class="delete-link"
+          (click)="onCommentDelete(comment._id)"
+        >
+          Delete <i class="fa-solid fa-trash-can"></i>
+        </span>
+        <span>
+          <i class="fa fa-user-circle"></i>
+          {{
+            currentUser?._id === comment.author._id
+              ? "You"
+              : comment.author.username
+          }}
+          on
+        </span>
+        <span>{{ comment.createdAt | date : "shortDate" }}</span>
+      </p>
+    </div>
+  </ng-container>
+</div>

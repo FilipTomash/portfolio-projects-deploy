@@ -1,0 +1,102 @@
+<section class="container">
+  <div class="container-heading">
+    <h2>{{ editPostData._id ? "Edit" : "Create" }} Event</h2>
+  </div>
+  <form
+    class="form-container"
+    [formGroup]="eventPostForm"
+    (ngSubmit)="onFormSubmit()"
+  >
+    <div class="form-group">
+      <label for="post-title">Title</label>
+      <input
+        class="form-control"
+        id="post-title"
+        type="text"
+        formControlName="title"
+        placeholder="enter event title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="post-location">Location</label>
+      <input
+        class="form-control"
+        id="post-location"
+        type="text"
+        placeholder="enter event location"
+        formControlName="location"
+      />
+    </div>
+    <div class="form-group">
+      <label for="post-date">Date</label>
+      <input
+        class="form-control"
+        id="post-date"
+        type="date"
+        formControlName="date"
+      />
+    </div>
+    <div class="form-group">
+      <label for="post-time">Time</label>
+      <input
+        class="form-control"
+        id="post-time"
+        type="time"
+        formControlName="time"
+      />
+    </div>
+    <div class="form-group">
+      <label for="post-cost">Entrance (&#8364;)</label>
+      <input
+        class="form-control"
+        id="post-cost"
+        type="number"
+        min="0"
+        formControlName="cost"
+      />
+    </div>
+    <div class="form-group">
+      <label for="post-body">Description</label>
+      <textarea
+        class="form-control"
+        id="post-body"
+        rows="5"
+        formControlName="description"
+        placeholder="enter event description"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="post-organizer">Organizer</label>
+      <input
+        class="form-control"
+        id="post-organizer"
+        type="text"
+        formControlName="organizer"
+      />
+    </div>
+    <div class="form-group">
+      <label for="post-artists">Artists</label>
+      <input
+        class="form-control"
+        id="post-artists"
+        type="text"
+        formControlName="artists"
+      />
+    </div>
+    <div class="form-group">
+      <label for="post-category">Category</label>
+      <input
+        class="form-control"
+        id="post-category"
+        type="text"
+        formControlName="category"
+      />
+    </div>
+    <div class="controls">
+      <button type="button" (click)="goBack()">Back</button>
+      <button type="submit" [disabled]="eventPostForm.invalid">
+        {{ editPostData._id ? "Update" : "Add" }}
+      </button>
+    </div>
+  </form>
+</section>

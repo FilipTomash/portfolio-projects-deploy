@@ -1,0 +1,17 @@
+<section class="container">
+  <div class="container-heading">
+    <h2>Event Details</h2>
+  </div>
+  <div
+    class="posts-container"
+    *ngIf="eventPostDetails$ | async as eventPostDetails"
+  >
+    <app-event-post
+      [eventPost]="eventPostDetails"
+      [isHoverShadow]="false"
+      [isLikeShown]="isLikeShown.value"
+    />
+    <app-comment-form />
+    <app-comments-list [comments]="eventPostDetails.comments" />
+  </div>
+</section>

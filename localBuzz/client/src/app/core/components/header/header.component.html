@@ -1,0 +1,73 @@
+<header>
+  <ng-container *ngIf="!currentUser$">
+    <div class="header-brand" routerLink="/">
+      <i class="fa-brands fa-forumbee" style="color: #f0f0f0"></i>
+      <h1>LocalBuzz</h1>
+    </div>
+    <nav class="nav">
+      <div class="nav-link" routerLink="/about" routerLinkActive="active">
+        About
+      </div>
+      <div class="nav-link" routerLink="/login" routerLinkActive="active">
+        Login
+      </div>
+      <div class="nav-link" routerLink="/register" routerLinkActive="active">
+        Register
+      </div>
+    </nav>
+  </ng-container>
+  <ng-container *ngIf="currentUser$">
+    <div
+      class="header-brand"
+      routerLink="/event-posts"
+      (click)="closeHeaderDropdown()"
+    >
+      <i class="fa-brands fa-forumbee" style="color: #f0f0f0"></i>
+      <h1>LocalBuzz</h1>
+    </div>
+    <nav class="nav">
+      <div
+        class="nav-link"
+        routerLink="/event-posts"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeHeaderDropdown()"
+      >
+        Events
+      </div>
+      <div
+        class="nav-link"
+        routerLink="/event-posts/add"
+        routerLinkActive="active"
+        (click)="closeHeaderDropdown()"
+      >
+        Create Event
+      </div>
+      <div class="user-badge" (click)="toggleDropdown()">
+        {{ currentUser$.username[0] | uppercase }}
+      </div>
+      <div class="dropdown" *ngIf="isDropdownOpen" (click)="toggleDropdown()">
+        <div class="username dropdown-item">
+          <i class="fa fa-user"> </i>
+          {{ currentUser$.username }}
+        </div>
+        <div
+          class="dropdown-item"
+          routerLink="/event-posts/user"
+          routerLinkActive="active"
+        >
+          My Posts
+        </div>
+        <div
+          class="dropdown-item"
+          routerLink="event-posts/user/comments"
+          routerLinkActive="active"
+        >
+          My Comments
+        </div>
+        <div class="dropdown-item" (click)="onLogout()">Log Out</div>
+        <div class="dropdown-item" (click)="onLogoutAll()">Log Out All</div>
+      </div>
+    </nav>
+  </ng-container>
+</header>

@@ -1,0 +1,29 @@
+@use "../../../../assets/scss/variables" as var;
+
+ul {
+  font-size: 35px;
+  color: white;
+}
+.empty-posts-container {
+  color: white;
+  padding: 30px 40px;
+  background-color: var.$black-two;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: var.$box-shadow;
+  h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+}
+
+.trainer {
+  background-color: lightgreen;
+  color: black;
+}
+
+.student {
+  background-color: lightpink;
+  color: black;
+}

@@ -1,0 +1,59 @@
+@use "../../../../assets/scss/variables" as var;
+
+.about {
+  // padding: 30px 40px;
+  // background-color: var.$black-two;
+  // margin: 15px;
+  // border-radius: 10px;
+  // color: var.$black;
+  // color: white;
+  // box-shadow: var.$box-shadow;
+  // transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    text-align: center;
+    padding: 20px;
+    color: var.$light-blue;
+    font-size: 1.3rem;
+    > p {
+      padding: 10px;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    margin: 20px 0;
+
+    > ul {
+      padding: 10px;
+      > li {
+        text-align: start;
+        padding: 5px;
+      }
+    }
+  }
+
+  &-footer {
+    font-weight: 700;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+    color: var.$light-blue;
+    > span {
+      cursor: pointer;
+
+      &:hover {
+        // color: var.$light-red;
+        color: white;
+      }
+    }
+  }
+}
