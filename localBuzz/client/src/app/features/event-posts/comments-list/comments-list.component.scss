@@ -79,12 +79,8 @@
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   .comment-container {
-    color: white;
     padding: 15px 20px;
-    background-color: var.$black-two;
     margin: 10px;
-    border-radius: 10px;
-    box-shadow: var.$box-shadow;
     h3 {
       text-align: center;
       margin-bottom: 25px;
@@ -92,60 +88,24 @@
     }
   }
   .comment {
-    display: flex;
-    flex-direction: column;
-
-    border-radius: 8px;
     margin: 20px 0px;
     padding: 8px;
-    background-color: var.$dark-blue;
-    border-bottom: 3px solid var.$black;
 
     &-body {
       font-size: 0.8rem;
-      margin-bottom: 15px;
-      padding-bottom: 15px;
     }
 
     &-author {
-      align-self: flex-end;
-      color: var.$light-blue;
       font-size: 0.7rem;
-      .user-icon {
-        padding-right: 10px;
-        margin-right: 10px;
-
-        border-right: 2px solid var.$light-blue;
-
-        i {
-          margin-right: 5px;
-        }
-      }
       .delete-link {
         margin-right: 12px;
         padding-right: 12px;
-        border-right: 2px solid lightgray;
-
-        color: var.$light-gray;
-        cursor: pointer;
-
-        &:hover {
-          color: var.$dark-red;
-        }
       }
     }
 
     .post-link {
-      font-weight: 600;
-      border-right: 2px solid var.$light-blue;
       padding-right: 5px;
       margin-right: 5px;
-      color: #48ad7e;
-      cursor: pointer;
-
-      &:hover {
-        color: #227b52;
-      }
     }
   }
 }

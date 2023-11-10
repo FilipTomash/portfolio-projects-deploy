@@ -35,8 +35,6 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 70%;
 
     .controls {
-      display: flex;
-      align-self: flex-end;
       width: 100%;
 
       button {
@@ -44,15 +42,6 @@ input[type="number"]::-webkit-outer-spin-button {
         width: 100%;
         font-size: 0.8rem;
         padding: 8px;
-      }
-    }
-
-    .form-group {
-      width: 100%;
-
-      textarea {
-        font-family: inherit;
-        resize: none;
       }
     }
   }
