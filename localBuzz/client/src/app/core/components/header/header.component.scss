@@ -105,3 +105,131 @@ header {
     }
   }
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 3) {
+  .mobile-view-no-user {
+    padding: 10px 5%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    .header-brand {
+      i {
+        font-size: 1.5rem;
+        margin: 0 5px;
+      }
+      h1 {
+        display: none;
+        z-index: -1;
+        font-size: 1.8rem;
+        margin-left: 5px;
+      }
+    }
+    .nav {
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      .nav-link {
+        margin-right: 5px;
+        padding: 5px;
+      }
+      :first-child {
+        display: none;
+      }
+    }
+  }
+
+  .user-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .dropdown {
+    right: 5px;
+    top: 50px;
+    font-size: 1rem;
+    &-item {
+      padding: 10px 20px;
+    }
+  }
+  .mobile-view-user {
+    display: grid;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+  .mobile-view-no-user {
+    padding: 10px 5%;
+    min-height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    .header-brand {
+      i {
+        font-size: 1.5rem;
+        margin: 0 5px;
+      }
+      h1 {
+        display: none;
+        z-index: -1;
+        font-size: 1.8rem;
+        margin-left: 5px;
+      }
+    }
+    .nav {
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      .nav-link {
+        margin-right: 5px;
+        padding: 5px;
+      }
+      :first-child {
+        display: none;
+      }
+    }
+  }
+  .user-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .dropdown {
+    right: 17px;
+    top: 35px;
+    font-size: 0.8rem;
+    &-item {
+      padding: 8px 18px;
+    }
+  }
+  .mobile-view-user {
+    padding: 10px 5%;
+    min-height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    .header-brand {
+      i {
+        font-size: 1.5rem;
+        margin: 0 5px;
+      }
+      h1 {
+        display: none;
+        z-index: -1;
+        font-size: 1.8rem;
+        margin-left: 5px;
+      }
+    }
+    .nav {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      font-size: 1rem;
+      .nav-link {
+        margin-right: 5px;
+        padding: 5px;
+      }
+    }
+  }
+}
