@@ -170,3 +170,199 @@
     color: lightgray !important;
   }
 }
+
+/* Your existing styles for iPhone SE*/
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .post {
+    padding: 20px 30px;
+    background-color: var.$black-two;
+    opacity: 0.9;
+    margin: 15px;
+    border-radius: 10px;
+    color: var.$black;
+    color: white;
+
+    box-shadow: var.$box-shadow;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &-heading {
+      display: flex;
+      justify-content: space-between;
+      color: var.$light-blue;
+      font-size: 1rem;
+      > h3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .likes-display {
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .btn-shown {
+          color: white;
+          margin: 1px 5px;
+          padding: 2px 4px;
+          font-size: 0.9rem;
+          border-radius: 6px;
+          background-color: var.$dark-blue;
+          cursor: pointer;
+          font-weight: 600;
+          transition: 0.1s ease-in;
+
+          border: 2px solid var.$dark-blue;
+          .fa-thumbs-up {
+            color: #48ad7e;
+          }
+
+          .fa-thumbs-down {
+            color: var.$light-red;
+          }
+
+          &:hover {
+            border: 2px solid white;
+          }
+        }
+
+        .btn-hidden {
+          color: white;
+          margin: 0;
+          margin-left: 10px;
+          padding: 4px 4px;
+          font-size: 0.9rem;
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          align-items: center;
+          text-align: center;
+          background-color: var.$black-two;
+          font-weight: 600;
+
+          .fa-thumbs-up {
+            color: #48ad7e;
+          }
+
+          .fa-thumbs-down {
+            color: var.$light-red;
+          }
+        }
+      }
+
+      .disabled-likes-display {
+        .btn-shown {
+          pointer-events: none;
+          cursor: not-allowed;
+          margin: 1px;
+          font-size: 0.9rem;
+          padding: 4px 4px;
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          align-items: center;
+          text-align: center;
+          .fa-thumbs-up {
+            color: lightgray;
+          }
+
+          .fa-thumbs-down {
+            color: lightgray;
+          }
+        }
+      }
+    }
+    &-body {
+      padding: 20px 0px;
+      margin-top: 15px;
+      border-top: 2px solid var.$dark-blue;
+      border-bottom: 2px solid var.$dark-blue;
+      font-size: 0.8rem;
+
+      &-details {
+        padding: 15px 0px;
+        margin: 0px;
+        // border-top: 2px solid var.$dark-blue;
+        border-bottom: 2px solid var.$dark-blue;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        > span {
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    &-footer {
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: none;
+      margin-top: 10px;
+      color: var.$light-blue;
+      font-size: 0.7rem;
+      > span > strong {
+        color: cadetblue;
+      }
+      // > span > strong {
+      //   color: var.$light-blue;
+      // }
+
+      .comments {
+        display: flex;
+
+        .edit-link {
+          padding: 0;
+          text-align: center;
+
+          color: #48ad7e;
+          cursor: pointer;
+
+          &:hover {
+            color: #227b52;
+          }
+        }
+
+        .delete-link {
+          margin-right: 8px;
+          padding-right: 0;
+          text-align: center;
+          border-right: 2px solid lightgray;
+
+          color: var.$light-red;
+          cursor: pointer;
+
+          &:hover {
+            color: var.$dark-red;
+          }
+        }
+
+        i {
+          margin-left: 5px;
+
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .post-hover:hover {
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25),
+        0 10px 20px rgba(0, 0, 0, 0.22);
+      scale: 1.01;
+    }
+  }
+
+  .disabled-like {
+    pointer-events: none;
+    cursor: not-allowed;
+    .fa-thumbs-up {
+      color: lightgray !important;
+    }
+    .fa-thumbs-down {
+      color: lightgray !important;
+    }
+  }
+}
