@@ -107,24 +107,19 @@ header {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
   header {
-    padding: 10px 5%;
     min-height: 50px;
     display: grid;
     .header-brand {
       i {
         font-size: 1.5rem;
-        margin: 0 5px;
+        margin: 0;
       }
       h1 {
         display: none;
-        z-index: -1;
-        font-size: 1.8rem;
-        margin-left: 5px;
       }
     }
     .nav {
       font-size: 20px;
-      display: flex;
       .nav-link {
         margin-right: 5px;
         padding: 5px;
@@ -146,7 +141,6 @@ header {
     width: 30px;
     height: 30px;
     font-size: 18px;
-    margin-left: 10px;
   }
 
   .dropdown {
@@ -161,7 +155,6 @@ header {
     grid-template-columns: 1fr 5fr;
 
     .nav {
-      align-items: center;
       justify-content: space-evenly;
       font-size: 1rem;
     }
