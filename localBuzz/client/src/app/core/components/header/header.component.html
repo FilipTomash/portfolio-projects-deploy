@@ -1,4 +1,9 @@
-<header>
+<header
+  [ngClass]="{
+    'mobile-view-no-user': !currentUser$,
+    'mobile-view-user': currentUser$
+  }"
+>
   <ng-container *ngIf="!currentUser$">
     <div class="header-brand" routerLink="/">
       <i class="fa-brands fa-forumbee" style="color: #f0f0f0"></i>
