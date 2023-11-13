@@ -3,8 +3,6 @@
 header {
   background-color: var.$black;
   color: white;
-  position: relative;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,10 +79,6 @@ header {
   font-size: 1.2rem;
   border-radius: 10px;
 
-  .username {
-    cursor: unset;
-  }
-
   &-item {
     margin: 0;
     padding: 15px 25px;
@@ -96,6 +90,7 @@ header {
     }
 
     &:first-child {
+      cursor: unset;
       border-radius: 10px 10px 0 0;
     }
 
@@ -121,7 +116,7 @@ header {
     .nav {
       font-size: 20px;
       .nav-link {
-        margin-right: 5px;
+        // margin-right: 5px;
         padding: 5px;
       }
     }
