@@ -1,4 +1,4 @@
-import { BadRequest, Unauthorized } from "../const/error.const.js";
+import { BadRequest, GeneralError, NotFound } from "../const/error.const.js";
 import { Comment } from "../models/comment.model.js";
 import { PostsService } from "./posts.service.js";
 
