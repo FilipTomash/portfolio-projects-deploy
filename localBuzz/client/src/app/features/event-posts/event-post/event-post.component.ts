@@ -24,7 +24,6 @@ export class EventPostComponent implements OnInit {
   currentUser: User;
 
   isLikeDisabled = false;
-  // isDislikeDisabled = false;
 
   @Input() eventPost: EventPost | EventPostDetails;
   @Input() isHoverShadow = true;

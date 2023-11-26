@@ -7,6 +7,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    canActivate: [() => loginGuard()],
   },
   {
     path: 'about',
