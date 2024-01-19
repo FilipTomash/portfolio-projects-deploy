@@ -1,0 +1,21 @@
+.not-found-page {
+  min-height: 95vh;
+  background-color: #bfd7ea;
+  padding: 30px;
+}
+
+.not-found-page-heading {
+  text-align: center;
+}
+
+.not-found-page-heading h2 {
+  margin: 0;
+  font-size: 35px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+.not-found-page-heading p {
+  font-size: 18px;
+  font-weight: 400;
+}

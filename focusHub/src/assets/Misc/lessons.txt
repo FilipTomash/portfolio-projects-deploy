@@ -1,0 +1,9 @@
+  // Curried function - straight from chatGPT. I dont get this one - please explain.
+  // const handleCommentChange = (index)=> (e) => {
+  //   const updatedComments = [...comments];
+  //   updatedComments[index] = e.target.value;
+  //   setComments(updatedComments);
+  // };
+  // I had trouble with the e.target in here Uncaught TypeError: Cannot read properties of undefined (reading 'target')
+  // at handleCommentChange (WorkSession.jsx:121:32)
+  // The error message indicates that the 'target' property is undefined when trying to access it in the handleCommentChange function. This typically occurs when the event object being passed to the function is not structured as expected.

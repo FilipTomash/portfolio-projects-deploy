@@ -1,0 +1,16 @@
+footer {
+  max-height: 3vh;
+  background-color: #0b3954;
+  color: #f0f6f9;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+footer p:first-child {
+  font-weight: bold;
+}

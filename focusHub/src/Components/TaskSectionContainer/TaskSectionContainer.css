@@ -1,0 +1,53 @@
+.TaskSectionContainer li {
+  padding: 8px;
+}
+.TaskSectionContainer h3 {
+  margin: 4px;
+}
+
+.TaskSectionContainer :hover {
+  color: #8854d0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.TaskSectionContainer .selectedText {
+  list-style: circle;
+}
+.selectedText{
+  position: absolute;
+  color: white;
+  z-index: -1;
+}
+.TaskSectionContainer li {
+  padding: 8px;
+}
+
+.TaskSectionContainer h3 {
+  margin: 4px;
+}
+
+.TaskSectionContainer li:hover {
+  color: #8854d0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+
+.TaskSectionContainer .taskList li::before {
+  content: "\2022"; /* Unicode character for a bullet point */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.TaskSectionContainer .subTaskList li::before {
+  content: "\2022"; /* Unicode character for a bullet point */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+

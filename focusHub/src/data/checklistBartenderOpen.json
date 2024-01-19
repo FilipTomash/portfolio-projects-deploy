@@ -1,0 +1,24 @@
+{
+  "clName": "Bartender Open",
+  "items": [
+    "Is the bartender present at their workplace and appearing according to standards?",
+    "Is the coffee machine clean and decorated according to the standard?",
+    "Is the bar counter and countertop clean?",
+    "Are the sink and faucet clean, with no rust or buildup?",
+    "Are the refrigerators (inside and outside) free of dust, streaks, leaks, and food residue?",
+    "Do the shelves have no dust, cobwebs, stains, or streaks?",
+    "Are the sockets and switches clean?",
+    "Is the refrigerator display free of spots, dust, streaks, and leaks?",
+    "Are the shelves filled with clean polished glasses?",
+    "Do you have enough cleaning supplies and household goods?",
+    "Is the bar inventory clean?",
+    "Has the blacklist been compiled and provided to the administrator and waiters for review?",
+    "Is the coffee grinder clean and filled with beans?",
+    "Is the check printer working properly, clean, and with a spare thermal ribbon for replacement?",
+    "Are the boards clean and marked?",
+    "Is the equipment in good working order, clean, and ready for use?",
+    "Is the beer system clean?",
+    "Do the beer kegs have labeling and meet the expiration date?",
+    "Are the bottles on the shelves wiped clean of dust and smudges?"
+  ]
+}

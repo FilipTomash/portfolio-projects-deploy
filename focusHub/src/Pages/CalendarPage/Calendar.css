@@ -1,0 +1,364 @@
+.DatePickingPageContainer {
+  display: flex;
+  height: 101vh;
+}
+
+.DatePickingPage {
+  color: #4b4848;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.DatePickerContainer {
+  margin-bottom: 20px;
+}
+
+.custom-calendar {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+.custom-day {
+  color: #333;
+}
+
+.TasksContainer {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.TasksContainer h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.TasksContainer p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.TasksContainer ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.TasksContainer li {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.AddTaskContainer {
+  display: flex;
+  align-items: baseline;
+}
+
+.AddTaskContainer input {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  border: 0.5px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  margin-top: 19px;
+  color: #4b4848;
+}
+
+.AddTaskButton {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.AddTaskButton:hover {
+  background-color: #0056b3;
+}
+
+.AddTaskContainer > input {
+  min-width: 300px;
+}
+.TasksContainer ul li {
+  width: 600px;
+  height: 30px;
+}
+
+.DeleteTaskButton {
+  width: 50px;
+  margin: 20px auto;
+}
+
+.DatePickingPageContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.DatePickingPage {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.react-datepicker-wrapper {
+  margin: 0;
+}
+
+.TasksContainer ul {
+  position: relative;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.TasksContainer ul li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  padding: px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.TasksContainer ul li span {
+  flex: 1;
+}
+
+.DeleteTaskButton {
+  align-content: center;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #087e8b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-alert {
+  border: 2px solid black; /* Add a red border to indicate an error */
+}
+
+.alert-bubble {
+  border: 1px solid black;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+#addTasksTitle {
+  font-size: 28px;
+  margin: 25px 0 0 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .DatePickingPageContainer {
+    display: flex;
+    max-height: 86.55vh;
+  }
+
+  .DatePickingPage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  .react-datepicker__input-container {
+    margin: 10px 0 0 0;
+    width: 200px;
+  }
+  .react-datepicker__input-container input {
+    display: flex;
+    justify-content: center;
+    border: 0.5px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    color: #4b4848;
+  }
+  .react-datepicker__input-container :hover {
+    cursor: pointer;
+  }
+
+  .DatePickingPage h2 {
+    font-size: 32px;
+  }
+
+  .DatePickerContainer {
+    margin-bottom: 20px;
+  }
+
+  .custom-calendar {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border: none;
+    font-family: Arial, sans-serif;
+  }
+
+  .custom-day {
+    color: #333;
+  }
+
+  .TasksContainer {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .TasksContainer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .TasksContainer p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .TasksContainer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .TasksContainer li {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .AddTaskContainer {
+    display: flex;
+    align-items: baseline;
+    min-width: 620px;
+  }
+
+  .AddTaskButton {
+    min-height: 48px;
+    padding: 0 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: 0.5px solid #007bff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+
+  .AddTaskButton:hover {
+    background-color: #0056b3;
+  }
+
+  .AddTaskContainer > input {
+    min-height: 46px;
+    min-width: 450px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 0.5px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    margin-top: 19px;
+  }
+
+  .TasksContainer ul li {
+    width: 600px;
+    height: 30px;
+  }
+
+  .DeleteTaskButton {
+    width: 50px;
+    margin: 5px 0;
+  }
+
+  .DatePickingPageContainer {
+    display: flex;
+    height: 100vh;
+  }
+
+  .DatePickingPage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+  .react-datepicker-wrapper {
+    margin: 0;
+  }
+
+  .TasksContainer ul {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .TasksContainer ul li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .AddTaskContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}

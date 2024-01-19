@@ -1,0 +1,13 @@
+.StatisticsMain {
+  display: flex;
+  background-color: #f2f2f2;
+  color: #4b4848;
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .StatisticsMain {
+    background-color: #f2f2f2;
+    display: flex;
+    min-height: 86.7vh;
+  }
+}

@@ -1,0 +1,153 @@
+.AboutUs {
+  display: flex;
+  background-color: #f8f8f8;
+}
+
+.AboutUsContent {
+  color: #4b4848;
+  flex: 1;
+  padding: 30px;
+  max-height: 600px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 32px;
+  color: #4b4848;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.pics {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #1787ff;
+  border-radius: 50%;
+  margin-right: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite;
+}
+
+.pics svg {
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.content-container {
+  flex: 1;
+}
+
+/* Different Icon Colors */
+.pics .lightbulb-icon {
+  color: #f6b93b;
+}
+
+.pics .chart-icon {
+  color: #d2dae2;
+}
+
+.pics .users-icon {
+  color: #242424;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .AboutUs {
+    display: flex;
+    max-height: 86.55vh;
+    background-color: #f8f8f8;
+  }
+
+  .AboutUsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 20px 60px 80px;
+    min-height: 71vh;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: 36px;
+    color: #4b4848;
+    margin: 10px 0 20px 0;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .pics {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-right: 35px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+  }
+
+  .pics svg {
+    font-size: 50px;
+    color: #ffffff;
+  }
+
+  .content-container {
+    flex: 1;
+  }
+
+  /* Different Icon Colors */
+  .pics .lightbulb-icon {
+    color: #f6b93b;
+  }
+
+  .pics .chart-icon {
+    color: #d2dae2;
+  }
+
+  .pics .users-icon {
+    color: #242424;
+  }
+}

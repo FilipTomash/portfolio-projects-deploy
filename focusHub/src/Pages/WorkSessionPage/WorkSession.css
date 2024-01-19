@@ -1,0 +1,458 @@
+.WorkSession {
+  display: flex;
+}
+.workSessionContent {
+  min-width: 900px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 80px;
+  gap: 5px;
+  align-items: center;
+  color: #4b4848;
+}
+
+.Headings > h2 {
+  font-size: 28px;
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  color: #4b4848;
+}
+
+.add-task-button {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding-block: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 140px;
+  min-height: 45px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h3 {
+  margin-top: 0;
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
+  flex-direction: column;
+}
+
+.taskList.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.taskList li {
+  width: 950px;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  position: relative;
+}
+
+.taskList.tasks li:last-child {
+  border-bottom: none;
+}
+
+.taskList.tasks li button.add-task-button {
+  background-color: transparent;
+  color: #28a745;
+  border: 2px solid #28a745;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.more-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.more-details::after {
+  margin-right: 0;
+}
+
+.subTaskList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subTaskList li {
+  padding: 5px 0;
+}
+
+.subTaskList li::after {
+  content: "";
+  width: 1px;
+  height: calc(100% + 14px);
+  background-color: #ccc;
+  position: absolute;
+  left: -35px;
+  top: -7px;
+}
+
+.subTaskList .subTaskBullet {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.more-details {
+  margin-top: 5px;
+}
+
+section h3 svg {
+  margin-right: 10px;
+  fill: rgb(66, 82, 66);
+}
+
+.taskList li .taskBullet svg {
+  margin-right: 10px;
+}
+
+.subTaskList li svg {
+  margin-right: 10px;
+}
+
+.Headings {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.add-task-button {
+  margin-top: 0;
+}
+
+.Headings h3 {
+  margin-bottom: 1px;
+}
+
+.add-task-button:hover {
+  color: white;
+}
+
+.notfiicationBell svg {
+  height: 40px;
+}
+
+.notfiicationBell {
+  position: absolute;
+  top: 6;
+  right: 10%;
+}
+
+section ul li {
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+section ul li:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.05);
+}
+
+/* WorkSession.css */
+
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popupContainer form {
+  background-color: #fff;
+  padding: 30px;
+  min-width: 700px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.popupContainer .form-group {
+  margin-bottom: 10px;
+}
+
+.popupContainer label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.popupContainer input[type="text"],
+.popupContainer input[type="date"] {
+  width: 97.5%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popupContainer select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popupContainer input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popupContainer input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.popupContainer input[type="text"]:focus,
+.popupContainer input[type="date"]:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.forma {
+  padding: 20px;
+  min-width: 450px;
+  max-height: 700px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.notificationBell svg {
+  position: absolute;
+  top: 17%;
+  right: 10%;
+  height: 30px;
+}
+
+.forma > .form-group > label {
+  padding: 0;
+  margin: 0;
+  margin: 10px;
+}
+
+/* .forma > .form-group  > input,button{
+  padding: 0;
+  margin: 0;
+  margin: 10px;
+} */
+/* button css needed */
+
+.formButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+}
+
+.formButtons button {
+  margin: 20px;
+}
+
+.form-group {
+  width: 80%;
+}
+
+.subtask-input-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.remove-subtask-button {
+  flex: 1;
+  margin-left: 10px;
+}
+.input-subtask {
+  flex: 6;
+}
+
+.add-subtask-button {
+  width: 100%;
+}
+.ButtonsAdd {
+  display: flex;
+}
+
+.TaskSectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 1000px;
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1920px) {
+  .WorkSession {
+    min-height: 87vh;
+    background-color: #f2f2f2;
+  }
+  .TaskSectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 1580px;
+    padding-top: 10px;
+  }
+  .popupContainer form {
+    background-color: #fff;
+    padding: 20px;
+    min-width: 80vh;
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .notificationBell svg {
+    position: absolute;
+    top: 12%;
+    right: 4%;
+    height: 34px;
+  }
+
+  .workSessionContent {
+    min-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 80px;
+    gap: 10px;
+    align-items: center;
+  }
+  .Headings > h2 {
+    font-size: 32px;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-task-button {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding-block: 6px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 180px;
+    min-height: 50px;
+    text-align: center;
+    display: flex;
+    margin: 15px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 820px) {
+  .WorkSession {
+    display: flex;
+  }
+  .workSessionContent {
+    width: 600px;
+  }
+  .taskSections {
+    flex-wrap: wrap;
+  }
+
+  .popupContainer {
+    position: fixed;
+    top: 67px;
+    left: 140px;
+    bottom: 0;
+    min-width: 450px;
+    max-height: 700px;
+    width: 680px;
+    height: 1160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .popupContent {
+    position: fixed;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .popupContent div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popupContent ul {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .popupContent li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .popupContent button {
+    width: 100px;
+  }
+  .popupContent h3 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .sidebar {
+    width: 15px;
+  }
+}
